@@ -1,13 +1,14 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const categories = [
   { id: 1, name: "Horror" },
   { id: 2, name: "Comedy" },
   { id: 3, name: "Romance" },
   { id: 4, name: "Sci-Fi" },
-  { id: 5, name: "Slice of Life"},
-  { id: 6, name: "Adventure"},
+  { id: 5, name: "Slice of Life" },
+  { id: 6, name: "Adventure" },
 ];
 
 const CategoryList = () => {
@@ -25,7 +26,14 @@ const CategoryList = () => {
           {categories.map((category) => (
             <tr key={category.id}>
               <td>{category.id}</td>
-              <td>{category.name}</td>
+              <td>
+                <Link 
+                  to={`/genre/${category.name.toLowerCase()}`} 
+                  className="text-decoration-none fw-bold text-primary"
+                >
+                  {category.name}
+                </Link>
+              </td>
             </tr>
           ))}
         </tbody>

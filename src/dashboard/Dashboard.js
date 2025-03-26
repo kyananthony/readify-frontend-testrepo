@@ -1,32 +1,36 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
-const Home = () => <div className="container mt-3"><h2>Home Page</h2></div>;
-const Authors = () => <div className="container mt-3"><h2>Authors Page</h2></div>;
-const Categories = () => <div className="container mt-3"><h2>Categories Page</h2></div>;
-const FeaturedEbooks = () => <div className="container mt-3"><h2>Featured eBooks Page</h2></div>;
-
 const Dashboard = () => {
+  const [activeTab, setActiveTab] = useState("Home");
+
   return (
-    <Router>
-      <div className="container mt-4">
-        <h1 className="text-center">Readify Dashboard</h1>
-        <nav className="nav nav-pills justify-content-center mb-4">
-          <Link className="nav-link" to="/">Home</Link>
-          <Link className="nav-link" to="/authors">Authors</Link>
-          <Link className="nav-link" to="/categories">Categories</Link>
-          <Link className="nav-link" to="/featured-ebooks">Featured eBooks</Link>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/authors" element={<Authors />} />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/featured-ebooks" element={<FeaturedEbooks />} />
-        </Routes>
+    <div className="d-flex vh-100">
+      {/* Sidebar */}
+      <div className="bg-dark text-white p-3" style={{ width: "250px" }}>
+        <h4 className="text-center">Readify Dashboard</h4>
+        <ul className="nav flex-column">
+          <li className="nav-item">
+            <button className="btn btn-outline-light w-100 my-2" onClick={() => setActiveTab("Home")}>Home</button>
+          </li>
+          <li className="nav-item">
+            <button className="btn btn-outline-light w-100 my-2" onClick={() => setActiveTab("Authors")}>Authors</button>
+          </li>
+          <li className="nav-item">
+            <button className="btn btn-outline-light w-100 my-2" onClick={() => setActiveTab("Categories")}>Categories</button>
+          </li>
+          <li className="nav-item">
+            <button className="btn btn-outline-light w-100 my-2" onClick={() => setActiveTab("Featured eBooks")}>Featured eBooks</button>
+          </li>
+        </ul>
       </div>
-    </Router>
+      
+      {/* Main Content */}
+      <div className="flex-grow-1 p-4">
+        <h2>{activeTab}</h2>
+        <p>Welcome to the {activeTab} section.</p>
+      </div>
+    </div>
   );
 };
 

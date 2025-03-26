@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const authors = [
   { id: 1, name: "J.K. Rowling", books: "Harry Potter Series" },
@@ -23,7 +24,12 @@ const AuthorList = () => {
           {authors.map((author) => (
             <tr key={author.id}>
               <td>{author.id}</td>
-              <td>{author.name}</td>
+              <td>
+                {/* Link to the detailed author page */}
+                <Link to={`/author/${author.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+                  {author.name}
+                </Link>
+              </td>
               <td>{author.books}</td>
             </tr>
           ))}
