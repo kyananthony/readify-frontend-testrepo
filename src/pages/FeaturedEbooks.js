@@ -24,7 +24,7 @@ const featuredEbooks = [
     id: 3,
     title: "To Kill a Mockingbird",
     author: "Harper Lee",
-    image: "/images/mockingbird.jpg",
+    image: "/images/mockingbird.png",
     preview: "A gripping tale of racial injustice in the Deep South. Through the eyes of Scout Finch, we witness a world of prejudice and moral growth. Her father, Atticus, stands as a beacon of justice in a divided society.",
     published: "July 11, 1960",
     rating: 4.9,
