@@ -25,6 +25,9 @@ const Dashboard = () => {
           <li className="nav-item">
             <button className="btn btn-outline-light w-100 my-2" onClick={() => setActiveTab("Login")}>Login</button>
           </li>
+          <li className="nav-item">
+            <button className="btn btn-outline-light w-100 my-2" onClick={() => setActiveTab("My Books")}>My Books</button>
+          </li>
         </ul>
       </div>
       

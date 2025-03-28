@@ -23,6 +23,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/featured-ebooks">Featured eBooks</Link>
             </li>
+             <li className="nav-item">
+              <Link className="nav-link" to="/My Books">My Books</Link>
+            </li>
           </ul>
         </div>
       </div>

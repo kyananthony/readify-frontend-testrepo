@@ -11,8 +11,10 @@ import FeaturedEbooks from './pages/FeaturedEbooks';
 import Dashboard from './dashboard/Dashboard';
 import GenrePage from './pages/GenrePage';  // Import GenrePage
 import Login from './pages/Login';
+import MyBooks from './pages/MyBooks';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { pdfjs } from "react-pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js`;
 
 function App() {
   return (
@@ -25,11 +27,13 @@ function App() {
         <Route path="/featured-ebooks" element={<Base><FeaturedEbooks /></Base>} />
         <Route path="/dashboard" element={<Base><Dashboard /></Base>} />
         <Route path="/login" element={<Base><Login /></Base>} />
-        {/* Route for Genre Page */}
         <Route path="/genre/:genreName" element={<Base><GenrePage /></Base>} /> 
+        <Route path="/my-books" element={<Base><MyBooks /></Base>} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+
+        

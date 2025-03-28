@@ -1,0 +1,28 @@
+.my-books-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .books-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .book-card {
+    width: 200px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-cover {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .book-content {
+    white-space: pre-wrap;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+  
