@@ -1,0 +1,36 @@
+/* Sidebar.css */
+.genre-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .sidebar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .sidebar h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
