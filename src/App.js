@@ -10,6 +10,9 @@ import CategoryList from './pages/CategoryList';
 import FeaturedEbooks from './pages/FeaturedEbooks';
 import Dashboard from './dashboard/Dashboard';
 import GenrePage from './pages/GenrePage';  // Import GenrePage
+import Login from './pages/Login';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
@@ -21,7 +24,7 @@ function App() {
         <Route path="/categories" element={<Base><CategoryList /></Base>} />
         <Route path="/featured-ebooks" element={<Base><FeaturedEbooks /></Base>} />
         <Route path="/dashboard" element={<Base><Dashboard /></Base>} />
-        
+        <Route path="/login" element={<Base><Login /></Base>} />
         {/* Route for Genre Page */}
         <Route path="/genre/:genreName" element={<Base><GenrePage /></Base>} /> 
       </Routes>
